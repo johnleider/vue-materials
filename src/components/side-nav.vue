@@ -17,12 +17,8 @@
 
             id: {
                 type: String,
-                default: ''
+                required: true
             }
-        },
-
-        ready () {
-            // $('.button-collapse').sideNav()
         },
 
         computed: {
