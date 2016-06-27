@@ -8,27 +8,23 @@
     export default {
         props: {
             large: {
-                type: null,
-                default: false,
-                coerce: val => val === ''
+                type: Boolean,
+                default: false
             },
 
             medium: {
-                type: null,
-                default: false,
-                coerce: val => val === ''
+                type: Boolean,
+                default: false
             },
 
             panel: {
-                type: null,
-                default: false,
-                coerce: val => val === ''
+                type: Boolean,
+                default: false
             },
 
             small: {
-                type: null,
-                default: false,
-                coerce: val => val === ''
+                type: Boolean,
+                default: false
             }
         },
 
