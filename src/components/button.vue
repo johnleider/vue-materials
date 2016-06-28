@@ -1,7 +1,7 @@
 <template>
-    <button class="btn"
-            :class="options"
+    <button :class="options"
             :type="type"
+            :data-target="target"
     >
         <slot></slot>
     </button>
@@ -14,6 +14,11 @@
         mixins: [Button],
 
         props: {
+            target: {
+                type: String,
+                default: ''
+            },
+
             type: {
                 type: String,
                 default: 'button'

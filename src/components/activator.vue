@@ -1,5 +1,5 @@
 <template>
-	<a href="#!"
+	<a :href="target"
 	   :data-activates="target"
 	   :class="options"
 	   @click="click"
@@ -9,8 +9,9 @@
 </template>
 
 <script>
-	import SideNav from '../mixins/side-nav'
 	import Dropdown from '../mixins/dropdown'
+	import Modal from '../mixins/modal'
+	import SideNav from '../mixins/side-nav'
 
 	export default {
 		props: {
@@ -27,6 +28,7 @@
 
 		mixins: [
 			Dropdown,
+			Modal,
 			SideNav
 		],
 
@@ -34,7 +36,8 @@
 			options () {
 				return {
 					'button-collapse': this.activates === 'side-nav',
-					'dropdown-button btn': this.activates === 'dropdown'
+					'dropdown-button btn': this.activates === 'dropdown',
+					'modal-trigger': this.activates === 'modal'
 				}
 			}
 		},
@@ -53,7 +56,7 @@
 			},
 
 			click () {
-				this.$emit(`${this.activates}:clicked`)
+				this.$emit(`${this.activates}:click`)
 			},
 
 			ready (cb) {

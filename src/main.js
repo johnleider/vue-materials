@@ -2,9 +2,7 @@ import Vue from 'vue'
 import App from './app.vue'
 import Materials from './vue-materialize'
 
-for (let key in Materials) {
-    Vue.component(key, Materials[key])
-}
+Vue.use(Materials)
 
 new Vue({
     el: '#app',

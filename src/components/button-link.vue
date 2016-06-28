@@ -1,6 +1,5 @@
 <template>
-    <a class="btn"
-       :class="options"
+    <a :class="options"
        :href="href"
     >
         <slot></slot>

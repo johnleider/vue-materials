@@ -1,35 +1,35 @@
-import Activator from './components/activator.vue'
-import AppFooter from './components/footer.vue'
-import AppNav from './components/nav.vue'
-import AppSideNav from './components/side-nav.vue'
-import Badge from './components/badge.vue'
-import Breadcrumbs from './components/breadcrumbs.vue'
-import Btn from './components/button.vue'
-import BtnLink from './components/button-link.vue'
-import Card from './components/card.vue'
-import Chip from './components/chip.vue'
-import Collapsible from './components/collapsible.vue'
-import Collection from './components/collection.vue'
-import Dropdown from './components/dropdown.vue'
-import Fab from './components/fab.vue'
-import Pagination from './components/pagination.vue'
-import PaginationItem from './components/pagination-item.vue'
+import Components from './components'
+import Dialog from './util/dialog'
+import ScrollFire from './util/scroll-fire'
+import Tooltip from './directives/tooltip'
 
-export default {
-    Activator,
-    AppFooter,
-    AppNav,
-    AppSideNav,
-    Badge,
-    Breadcrumbs,
-    Btn,
-    BtnLink,
-    Card,
-    Chip,
-    Collapsible,
-    Collection,
-    Dropdown,
-    Fab,
-    Pagination,
-    PaginationItem
+function plugin(Vue) {
+    if (plugin.installed) {
+        return
+    }
+
+    for (let key in Components) {
+        Vue.component(key, Components[key])
+    }
+
+    Vue.directive('tooltip', Tooltip)
+
+    Vue.dialog = Dialog
+    Vue.scrollFire = ScrollFire
+
+    Object.defineProperties(Vue.prototype, {
+        $dialog: {
+            get () {
+                return Vue.dialog.bind(this)
+            }
+        },
+
+        $scrollFire: {
+            get () {
+                return Vue.scrollFire.bind(this)
+            }
+        }
+    })
 }
+
+export default plugin
