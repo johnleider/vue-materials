@@ -1,7 +1,7 @@
 export default {
     methods: {
         modal () {
-            this.ready(() => $(this.$el).leanModal(this.params))
+            this.load(() => $(this.$el).leanModal(this.params))
         }
     }
 }

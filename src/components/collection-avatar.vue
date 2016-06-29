@@ -4,7 +4,9 @@
     >
         <img :src="src" class="circle">
         <slot></slot>
-        <a href="#!" class="secondary-content">
+        <a href="#!" 
+           class="secondary-content"
+        >
             <slot name="secondary"></slot>
         </a>
     </li>

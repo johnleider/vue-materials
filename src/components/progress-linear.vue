@@ -1,11 +1,9 @@
 <template>
-    <template>
-        <div class="progress">
-            <div :class="options" 
-                 :style="style"
-            ></div>
-        </div>
-    </template>
+    <div class="progress">
+        <div :class="options" 
+             :style="style"
+        ></div>
+    </div>
 </template>
 
 <script>
@@ -36,9 +34,7 @@
             },
 
             style () {
-                if (this.width === false) {
-                    return {}
-                }
+                if (this.width === false) return {}
 
                 return {
                     'width': `${this.width}%`

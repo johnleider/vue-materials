@@ -5,6 +5,7 @@
         <slot></slot>
     </a>
 </template>
+
 <script>
     import Button from '../mixins/button'
     

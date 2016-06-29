@@ -19,11 +19,17 @@
 
         methods: {
             init () {
-                if (this.selected) {
-                    document.addEventListener('DOMContentLoaded', () => {
-                        $(this.$el).tabs('select_tab', this.selected)
-                    })
+                if (!this.selected) return
+
+                if (document.readyState === 'complete') {
+                    return this.load()
                 }
+
+                document.addEventListener('DOMContentLoaded', () => this.load())
+            },
+
+            load () {
+                $(this.$el).tabs('select_tab', this.selected)
             }
         }
     }

@@ -6,7 +6,6 @@
     </i>
 </template>
 
-
 <script>
     export default {
         props: {

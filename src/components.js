@@ -23,6 +23,8 @@ import Fab from './components/fab.vue'
 import Pagination from './components/pagination.vue'
 import PaginationItem from './components/pagination-item.vue'
 import Parallax from './components/parallax.vue'
+import ProgressLinear from './components/progress-linear.vue'
+import ProgressCircular from './components/progress-circular.vue'
 import Slider from './components/slider.vue'
 import Slide from './components/slide.vue'
 import Tab from './components/tab.vue'
@@ -54,6 +56,8 @@ export default {
     Pagination,
     PaginationItem,
     Parallax,
+    ProgressLinear,
+    ProgressCircular,
     Slider,
     Slide,
     Tab,

@@ -33,9 +33,31 @@
                 }
             },
 
+            params () {
+                return {
+                    accordion: this.type === 'accordion'
+                }
+            },
+
             type () {
                 if (this.collapsible) return 'accordion'
                 if (this.expandable) return 'expandable'
+            }
+        },
+
+        mounted () {
+            this.init()
+        },
+
+        methods: {
+            init () {
+                if (document.readyState === 'complete') {
+                    this.load()
+                }
+            },
+
+            load () {
+                $(this.$el).collapsible(this.params)
             }
         }
     }

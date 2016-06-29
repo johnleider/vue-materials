@@ -43,11 +43,11 @@
 		},
 
 		mounted () {
-			this.activate()
+			this.init()
 		},
 
 		methods: {
-			activate () {
+			init () {
 				if (typeof this[this.activates] !== 'function') {
 					throw `Method '${this.activates}' does not exist in <activator> component.`
 				}
@@ -59,7 +59,11 @@
 				this.$emit(`${this.activates}:click`)
 			},
 
-			ready (cb) {
+			load (cb) {
+				if (document.readyState === 'complete') {
+					return cb()
+				}
+
 				document.addEventListener('DOMContentLoaded', () => cb())
 			}
 		}

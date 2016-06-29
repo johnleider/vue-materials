@@ -61,9 +61,15 @@
 
         methods: {
             init () {
-                document.addEventListener('DOMContentLoaded', () => {
-                    $(this.$el).slider(this.params)
-                })
+                if (document.readyState === 'complete') {
+                    return this.load()
+                }
+                
+                document.addEventListener('DOMContentLoaded', () => this.load())
+            },
+
+            load () {
+                $(this.$el).slider(this.params)
             },
 
             pause () {

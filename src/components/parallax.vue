@@ -1,6 +1,10 @@
 <template>
-    <div class="parallax-container">
-        <div class="parallax"><img :src="src"></div>
+    <div class="parallax-container"
+         :style="style"
+    >
+        <div class="parallax">
+            <img :src="src">
+        </div>
     </div>
 </template>
 
@@ -8,7 +12,7 @@
     export default {
         props: {
             height: {
-                type: String,
+                type: Number,
                 default: 500
             },
 
@@ -18,14 +22,29 @@
             }
         },
 
+        computed: {
+            style () {
+                return {
+                    height: `${this.height}px`
+                }
+            }
+        },
+
         mounted () {
             this.init()
         },
 
         methods: {
             init () {
-                document.addEventListener('DOMContentLoaded', () => $('.parallax').parallax())
-                this.$el.style.height = `${this.height}px`
+                if (document.readyState === 'complete') {
+                    return this.load()
+                }
+
+                document.addEventListener('DOMContentLoaded', () => this.load())
+            },
+
+            load () {
+                $('.parallax').parallax()
             }
         }
     }

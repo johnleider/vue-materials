@@ -1,7 +1,7 @@
 <template>
     <div :id="id" 
-         class="modal"
          :class="options"
+         class="modal"
     >
         <div class="modal-content">
             <slot name="content"></slot>
@@ -42,6 +42,16 @@
                     'bottom-sheet': this.bottomSheet,
                     'modal-fixed-footer': this.fixedFooter
                 }
+            }
+        },
+
+        methods: {
+            close () {
+                $(this.$el).closeModal()
+            },
+            
+            open () {
+                $(this.$el).openModal()
             }
         }
     }

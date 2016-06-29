@@ -64,9 +64,15 @@
 
         methods: {
             init () {
-                document.addEventListener('DOMContentLoaded', () => {
-                    $(this.$el).carousel(this.params)
-                })
+                if (document.readyState === 'complete') {
+                    return this.load()
+                }
+
+                document.addEventListener('DOMContentLoaded', () => this.load())
+            },
+
+            load () {
+                $(this.$el).carousel(this.params)
             },
 
             next (n = 1) {

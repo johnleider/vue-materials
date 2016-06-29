@@ -3,7 +3,9 @@
        :class="options"
     >
         <slot></slot>
-        <a href="#!" class="secondary-content">
+        <a href="#!" 
+           class="secondary-content"
+        >
             <slot name="secondary"></slot>
         </a>
     </a>

@@ -9,12 +9,6 @@
 
 <script type="text/babel">
     export default {
-        events: {
-            close () {
-                $(this.$el).closeFAB()
-            }
-        },
-
         props: {
             horizontal: {
                 type: Boolean,
@@ -34,7 +28,16 @@
                     'horizontal': this.horizontal
                 }
             }
+        },
+
+        methods: {
+            open () {
+                $(this.$el).openFAB()
+            },
+
+            close () {
+                $(this.$el).closeFAB()
+            }
         }
     }
 </script>
-

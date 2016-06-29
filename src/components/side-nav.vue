@@ -1,7 +1,7 @@
 <template>
     <ul :id="id" 
-        class="side-nav"
         :class="options"
+        class="side-nav"
     >
         <slot></slot>
     </ul>

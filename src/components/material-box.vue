@@ -20,7 +20,7 @@
             },
 
             width: {
-                type: String,
+                type: Number,
                 required: true
             }
         }
