@@ -65,7 +65,7 @@
         methods: {
             init () {
                 if (document.readyState === 'complete') {
-                    return this.load()
+                    return this.$nextTick(() => this.load())
                 }
 
                 document.addEventListener('DOMContentLoaded', () => this.load())

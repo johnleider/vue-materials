@@ -40,7 +40,7 @@
 
 				return '#!'
 			},
-			
+
 			options () {
 				return {
 					'button-collapse': this.activates === 'side-nav',
@@ -69,7 +69,7 @@
 
 			load (cb) {
 				if (document.readyState === 'complete') {
-					return cb()
+					return this.$nextTick(() => cb())
 				}
 
 				document.addEventListener('DOMContentLoaded', () => cb())

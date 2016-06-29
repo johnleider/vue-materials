@@ -52,7 +52,7 @@
         methods: {
             init () {
                 if (document.readyState === 'complete') {
-                    this.load()
+                    return this.$nextTick(() => this.load())
                 }
             },
 

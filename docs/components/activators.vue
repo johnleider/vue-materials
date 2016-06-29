@@ -4,11 +4,11 @@
             <h4 class="col s12">Examples</h4>
             <div class="col s4">
                 <activator activates="dropdown"
-                           target="dropdown"
+                           target="dropdown1"
                 >
                     Dropdown
                 </activator>
-                <dropdown id="dropdown">
+                <dropdown id="dropdown1">
                     <li>
                         <a href="#!">Option 1</a>
                     </li>

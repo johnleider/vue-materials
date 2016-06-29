@@ -63,22 +63,6 @@
                     alignment: this.alignment
                 }
             }
-        },
-
-        mounted () {
-            this.init()
-        },
-
-        methods: {
-            init () {
-                if (document.readyState === 'complete') {
-                    // this.load()
-                }
-            },
-
-            load () {
-                // $(this.$el).dropdown(this.options)
-            }
         }
     }
 </script>
