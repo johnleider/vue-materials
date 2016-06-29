@@ -1,5 +1,5 @@
 <template>
-	<a :href="target"
+	<a :href="href"
 	   :data-activates="target"
 	   :class="options"
 	   @click="click"
@@ -33,6 +33,14 @@
 		],
 
 		computed: {
+			href () {
+				if (this.target.startsWith('#')) {
+					return this.target
+				}
+
+				return '#!'
+			},
+			
 			options () {
 				return {
 					'button-collapse': this.activates === 'side-nav',

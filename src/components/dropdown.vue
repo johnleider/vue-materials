@@ -72,12 +72,12 @@
         methods: {
             init () {
                 if (document.readyState === 'complete') {
-                    this.load()
+                    // this.load()
                 }
             },
 
             load () {
-                $(this.$el).dropdown(this.options)
+                // $(this.$el).dropdown(this.options)
             }
         }
     }

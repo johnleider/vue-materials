@@ -17,7 +17,7 @@
 
 		data () {
 			return {
-				component: 'buttons'
+				component: 'activators'
 			}
 		},
 
