@@ -32,7 +32,7 @@
 
             params: {
                 type: Object,
-                default: {}
+                default: () => {}
             }
         },
 

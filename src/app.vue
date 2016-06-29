@@ -2,38 +2,30 @@
 	<div id="app">
 
 		<header>
-			<app-nav class="blue">
-				<div slot="logo">
-					<activator activates="side-nav" target="slide-out">
-						<icon>list</icon>
-					</activator>
-				</div>
-				<ul class="right hide-on-med-and-down" slot="items">
-	                <li><a href="sass.html">Sass</a></li>
-	                <li><a href="badges.html">Components</a></li>
-	                <li><a href="collapsible.html">JavaScript</a></li>
-	            </ul>
-				<app-side-nav id="slide-out" fixed slot="side-nav">
-					<li>
-						<a href="#!">Link</a>
-					</li>
-				</app-side-nav>
-			</app-nav>
+			<main-nav @click="page"></main-nav>
 		</header>
 		
 		<main>
-			<div class="container">
-				<div class="col s12">
-					<btn v-tooltip="'d'">Here</btn>
-				</div>
-			</div>
+			<component :is="component"></component>
 		</main>
 	</div>
 </template>
 
 <script type="text/babel">
 	export default {
-		name: 'App'
+		name: 'App',
+
+		data () {
+			return {
+				component: 'buttons'
+			}
+		},
+
+		methods: {
+			page (component) {
+				this.component = component
+			}
+		}
 	}
 </script>
 

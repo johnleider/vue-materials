@@ -3,7 +3,7 @@ import AppFooter from './components/footer.vue'
 import AppNav from './components/nav.vue'
 import AppSideNav from './components/side-nav.vue'
 import Badge from './components/badge.vue'
-import Breadcrumbs from './components/breadcrumbs.vue'
+import Breadcrumb from './components/breadcrumb.vue'
 import Btn from './components/button.vue'
 import BtnLink from './components/button-link.vue'
 import Card from './components/card.vue'
@@ -36,7 +36,7 @@ export default {
     AppNav,
     AppSideNav,
     Badge,
-    Breadcrumbs,
+    Breadcrumb,
     Btn,
     BtnLink,
     Card,

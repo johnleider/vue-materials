@@ -1,5 +1,10 @@
 export default {
     props: {
+        disabled: {
+            type: Boolean,
+            default: false
+        },
+
         dropdown: {
             type: Boolean,
             default: false
@@ -74,6 +79,7 @@ export default {
                 'btn-large': this.large,
                 'btn-flat': this.flat,
                 'dropdown-button': this.dropdown,
+                'disabled': this.disabled,
                 'modal-action modal-close btn-flat': this.modalLink,
                 'waves-effect waves-light': this.wavesLight,
                 'waves-effect waves-red': this.wavesRed,

@@ -6,7 +6,7 @@
                    :href="crumb.href" 
                    class="breadcrumb"
                 >
-                    {{ crumb.content }}    
+                    {{ crumb.text }}    
                 </a>
             </div>
         </div>
@@ -18,6 +18,7 @@
         props: {
             crumbs: {
                 type: Array,
+                default: () => {},
                 required: true
             }
         }
