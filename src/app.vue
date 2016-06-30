@@ -17,7 +17,7 @@
 
 		data () {
 			return {
-				component: 'activators'
+				component: 'badges'
 			}
 		},
 
@@ -30,6 +30,14 @@
 </script>
 
 <style>
+	h4 {
+		margin: 2rem 0;
+	}
+
+	section {
+		margin-bottom: 2rem;
+	}
+
 	header, main, footer {
 		padding-left: 240px;
 	}
@@ -43,5 +51,9 @@
 	main {
 		padding-top: 2rem;
 		min-height: 150vh;
+	}
+
+	blockquote {
+		border-left-color: #1565C0 !important;
 	}
 </style>

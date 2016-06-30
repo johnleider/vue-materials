@@ -1,5 +1,5 @@
 <template>
-    <app-nav class="blue">
+    <app-nav class="blue darken-3">
         <div slot="logo">
             <activator activates="side-nav" 
                        target="slide-out"

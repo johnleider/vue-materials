@@ -1,10 +1,11 @@
 <template>
     <div class="container">
-        <div class="row">
+        <section class="row">
             <h4 class="col s12">Examples</h4>
             <div class="col s4">
                 <activator activates="dropdown"
                            target="dropdown1"
+                           class="blue lighten-3"
                 >
                     Dropdown
                 </activator>
@@ -23,7 +24,7 @@
             <div class="col s4">
                 <activator activates="modal"
                            target="#modal"
-                           class="btn"
+                           class="btn blue lighten-3"
                 >
                     Modal
                 </activator>
@@ -41,32 +42,43 @@
             <div class="col s4">
                 <activator activates="side-nav"
                            target="slide-out"
-                           class="btn"
+                           class="btn blue lighten-3"
                 >
                     Side Nav
                 </activator>
             </div>
+        </section>
+        <section class="row">
+            <h4 class="col s12">Element</h4>
+            <div class="col s12">
+                <blockquote>
+                    <code>
+                        &lt;activator&gt;&lt;/activator&gt;
+                    </code>
+                </blockquote>
+            </div>
+        </section>
+        <section class="row">
             <h4 class="col s12">Properties</h4>
             <div class="col s12">
                 <table>
                     <thead>
                         <tr>
                             <th>Name</th>
+                            <th>Type</th>
+                            <th>Required</th>
                             <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>activates</td>
-                            <td>Specified component to activate. <strong>[dropdown, modal, side-nav]</strong></td>
-                        </tr>
-                        <tr>
-                            <td>target</td>
-                            <td>The id of the activating component.  For modals <em>must</em> be prefixed with <strong>#</strong></td>
+                        <tr v-for="property in properties">
+                            <td v-for="row in property">{{ row }}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+        </section>
+        <section class="row">
             <h4 class="col s12">Methods</h4>
             <div class="col s12">
                 <table>
@@ -84,6 +96,23 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        </section>
     </div>
 </template>
+
+<script>
+    export default {
+        data () {
+            return {
+                properties: [
+                    [
+                        'activates', 'String', 'Yes', 'Specified component to activate. [dropdown, modal, side-nav]'
+                    ],
+                    [
+                        'target', 'String', 'Yes', 'The id of the activating component.  For modals must be prefixed with #'
+                    ]
+                ]
+            }
+        }
+    }
+</script>
