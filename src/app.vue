@@ -77,12 +77,16 @@
 
         &.v-enter-active {
         	transform: translateX(150%);
-        	opacity: 1;
+        	opacity: 0;
+        }
+
+        &.v-enter {
+        	opacity: 0;
         }
 
         &.v-leave-active {
         	transform: translateX(-150%);
-        	opacity: 1;
+        	opacity: 0;
         }
     }
 
