@@ -1,5 +1,5 @@
 <template>
-    <app-nav class="blue darken-3">
+    <app-nav>
         <div slot="logo">
             <activator activates="side-nav" 
                        target="slide-out"
@@ -9,7 +9,7 @@
             </activator>
         </div>
         <div slot="items" class="page-title">
-            <h2>Index</h2>
+            <h2>{{ title_uppercase }}</h2>
         </div>
         <app-side-nav id="slide-out"
                       slot="side-nav"
@@ -27,9 +27,11 @@
 
 <script>
     export default {
-        data () {
-            return {
-                items: ['Activators','Badges','Breadcrumbs','Buttons','Cards','Carousel','Chips','Collapsible','Collection','Dropdown','FABs','Footer','Icon','Material Box','Modal','Nav','Pagination','Parallax','Progress','Side Nav','Slider','Tabs']
+        props: ['items', 'title'],
+
+        computed: {
+            title_uppercase () {
+                return `${this.title.charAt(0).toUpperCase()}${this.title.slice(1)}`
             }
         },
 

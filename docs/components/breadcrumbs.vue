@@ -1,29 +1,27 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <breadcrumb :crumbs="items"></breadcrumb>
-            </div>
+    <examples>
+        <div class="col s12">
+            <breadcrumb :crumbs="items"></breadcrumb>
         </div>
-    </div>
+    </examples>
 </template>
 
 <script>
     export default {
         data () {
             return {
-                items: [
+                "items": [
                     {
-                        href: '#!',
-                        text: 'First'
+                        "href": "#!",
+                        "text": "First"
                     },
                     {
-                        href: '#!',
-                        text: 'Second'
+                        "href": "#!",
+                        "text": "Second"
                     },
                     {
-                        href: '#!',
-                        text: 'Third'
+                        "href": "#!",
+                        "text": "Third"
                     }
                 ]
             }

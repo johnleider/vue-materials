@@ -2,34 +2,90 @@
 	<div id="app">
 
 		<header>
-			<main-nav @click="page"></main-nav>
+			<main-nav @click="page" :items="items" :title="component"></main-nav>
 		</header>
 		
 		<main>
-			<component :is="component"></component>
+        	<div  class="container docs"
+		          transition-mode="out-in"
+		          transition
+		          v-if="component"
+            >
+				<component :is="component"></component>
+        		<docs :elements="data.elements" 
+	        		  :headers="data.headers" 
+	        		  :properties="data.properties" 
+	        		  :mheaders="data.mheaders" 
+	        		  :mproperties="data.mproperties"
+			     ></docs>
+        	</div>
 		</main>
 	</div>
 </template>
 
 <script type="text/babel">
+    import menu from '../docs/data/items.json'	
+
 	export default {
 		name: 'App',
 
 		data () {
 			return {
-				component: 'badges'
+				component: '',
+				items: menu['items'],
+				doc_data: {},
+				data: {
+					elements: [],
+					headers: [],
+					properties: [],
+					mheaders: [],
+					mproperties: []
+				}
 			}
+		},
+
+		mounted () {
+			this.init()
+			this.page('buttons')
 		},
 
 		methods: {
 			page (component) {
-				this.component = component
+				this.component = ''
+				this.data = this.doc_data[component]
+				this.$nextTick(() => this.component = component)
+			},
+
+			init () {
+				menu['items'].forEach((i) => {
+					let name = i.toLowerCase().replace(' ', '-')
+			    	this.doc_data[name] = require(`../docs/data/${name}.json`)
+			    })
 			}
 		}
 	}
 </script>
 
-<style>
+<style lang="sass">
+	body {
+        overflow-x: hidden;
+	}
+
+    .docs {
+        transition: all .4s ease;
+        box-sizing: border-box;
+
+        &.v-enter-active {
+        	transform: translateX(150%);
+        	opacity: 1;
+        }
+
+        &.v-leave-active {
+        	transform: translateX(-150%);
+        	opacity: 1;
+        }
+    }
+
 	h4 {
 		margin: 2rem 0;
 	}
@@ -48,12 +104,13 @@
       }
     }
 
+    .container {
+    	width: 85% !important;
+    	max-width: 85% !important;
+    }
+
 	main {
 		padding-top: 2rem;
 		min-height: 150vh;
-	}
-
-	blockquote {
-		border-left-color: #1565C0 !important;
 	}
 </style>

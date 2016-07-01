@@ -17,7 +17,11 @@
     "cross-env": "^1.0.6",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.4",
+    "json-loader": "^0.5.4",
+    "materialize-css": "^0.97.6",
+    "style-loader": "^0.13.1",
     "vue-loader": "^9.0.0",
+    "vue-resource": "^0.9.1",
     "vue-router": "^0.7.13",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.0"

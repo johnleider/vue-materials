@@ -1,0 +1,21 @@
+{
+    "elements": [
+        "breadcrumbs"
+    ],
+    "headers": [
+        "Name", "Type", "Required", "Description"
+    ],
+    "properties": [
+        [
+            "new", 
+            "Boolean", 
+            "No", 
+            "Applies 'new' class to badge"
+        ]
+    ],
+    "mheaders": [
+        "Name", 
+        "Description"
+    ],
+    "mproperties": []
+}

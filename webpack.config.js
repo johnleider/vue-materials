@@ -23,11 +23,23 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
+      {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file',
         query: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          loader: 'file?name=/fonts/[name].[ext]'
+      },
+      {
+          test: /\.json$/,
+          loader: 'json'
       }
     ]
   },
