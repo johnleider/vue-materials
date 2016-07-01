@@ -2,7 +2,10 @@
 	<div id="app">
 
 		<header>
-			<main-nav @click="page" :items="items" :title="component"></main-nav>
+			<main-nav @click="page" 
+					  :items="items" 
+					  :title="component"
+		    ></main-nav>
 		</header>
 		
 		<main>
@@ -11,12 +14,14 @@
 		          transition
 		          v-if="component"
             >
-				<component :is="component"></component>
-        		<docs :elements="data.elements" 
-	        		  :headers="data.headers" 
-	        		  :properties="data.properties" 
-	        		  :mheaders="data.mheaders" 
-	        		  :mproperties="data.mproperties"
+				<component :is="component" 
+						   keep-alive
+			    ></component>
+        		<docs :e="data.e" 
+	        		  :ph="data.ph" 
+	        		  :pd="data.pd" 
+	        		  :mh="data.mh" 
+	        		  :md="data.md"
 			     ></docs>
         	</div>
 		</main>
@@ -35,18 +40,18 @@
 				items: menu['items'],
 				doc_data: {},
 				data: {
-					elements: [],
-					headers: [],
-					properties: [],
-					mheaders: [],
-					mproperties: []
+					e: [],
+					ph: [],
+					pd: [],
+					mh: [],
+					mp: []
 				}
 			}
 		},
 
 		mounted () {
 			this.init()
-			this.page('buttons')
+			this.page('carousels')
 		},
 
 		methods: {

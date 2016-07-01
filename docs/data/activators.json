@@ -1,11 +1,11 @@
 {
-    "elements": [
+    "e": [
         "activator"
     ],
-    "headers": [
+    "ph": [
         "Name", "Type", "Required", "Description"
     ],
-    "properties": [
+    "pd": [
         [
             "activates", 
             "String", 
@@ -17,13 +17,19 @@
             "String", 
             "Yes", 
             "The id of the activating component.  For modals must be prefixed with #"
+        ],
+        [
+            "params", 
+            "Object", 
+            "No", 
+            "Accepts same properties normally passed to the plugins."
         ]
     ],
-    "mheaders": [
+    "mh": [
         "Name", 
         "Description"
     ],
-    "mproperties": [
+    "md": [
         [
             "click", "Emits an event @click when clicked"
         ]

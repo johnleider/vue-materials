@@ -1,6 +1,6 @@
 <template>
     <section class="row">
-        <h4 class="col s12">Elements</h4>
+        <h4 class="col s12">Element</h4>
         <div class="col s12">
             <blockquote v-for="element in elements">
                 <code>

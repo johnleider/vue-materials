@@ -8,6 +8,8 @@ import Examples from '../docs/components/examples.vue'
 import Elements from '../docs/components/elements.vue'
 import Properties from '../docs/components/properties.vue'
 import Methods from '../docs/components/methods.vue'
+import Cards from '../docs/components/cards.vue'
+import Carousels from '../docs/components/carousels.vue'
 
 export default {
     MainNav,
@@ -19,5 +21,7 @@ export default {
     Examples,
     Elements,
     Properties,
-    Methods
+    Methods,
+    Cards,
+    Carousels
 }

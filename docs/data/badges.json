@@ -1,21 +1,21 @@
 {
-    "elements": [
+    "e": [
         "badge"
     ],
-    "headers": [
+    "ph": [
         "Name", "Type", "Required", "Description"
     ],
-    "properties": [
+    "pd": [
         [
             "new", 
             "Boolean", 
             "No", 
-            "Applies 'new' class to badge"
+            "Applies new class to badge"
         ]
     ],
-    "mheaders": [
+    "mh": [
         "Name", 
         "Description"
     ],
-    "mproperties": []
+    "md": []
 }

@@ -1,19 +1,19 @@
 <template>
     <div>
-        <elements :elements="elements"></elements>
-        <properties :headers="headers" 
-                    :properties="properties" 
-                    v-if="properties.length > 0"
+        <elements :elements="e"></elements>
+        <properties :headers="ph" 
+                    :properties="pd" 
+                    v-if="pd.length > 0"
         ></properties>
-        <methods :headers="mheaders" 
-                 :methods="mproperties"  
-                 v-if="mproperties.length > 0"
+        <methods :headers="mh" 
+                 :methods="md"  
+                 v-if="md.length > 0"
         ></methods>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['elements', 'headers', 'properties', 'mheaders', 'mproperties']
+        props: ['e', 'ph', 'pd', 'mh', 'md']
     }
 </script>

@@ -1,21 +1,21 @@
 {
-    "elements": [
+    "e": [
         "breadcrumbs"
     ],
-    "headers": [
+    "ph": [
         "Name", "Type", "Required", "Description"
     ],
-    "properties": [
+    "pd": [
         [
-            "new", 
-            "Boolean", 
-            "No", 
-            "Applies 'new' class to badge"
+            "items", 
+            "Array", 
+            "Yes", 
+            "Loops through to display breadcrumbs.  Must be array of objects that contain a text and href property."
         ]
     ],
-    "mheaders": [
+    "mh": [
         "Name", 
         "Description"
     ],
-    "mproperties": []
+    "md": []
 }

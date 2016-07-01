@@ -1,11 +1,11 @@
 {
-    "elements": [
+    "e": [
         "btn"
     ],
-    "headers": [
+    "ph": [
         "Name", "Type", "Required", "Description"
     ],
-    "properties": [
+    "pd": [
         [
             "disabled", 
             "Boolean", 
@@ -97,9 +97,9 @@
             "Assigns button type."
         ]
     ],
-    "mheaders": [
+    "mh": [
         "Name", 
         "Description"
     ],
-    "mproperties": []
+    "md": []
 }

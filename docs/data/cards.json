@@ -1,21 +1,39 @@
 {
-    "elements": [
-        "breadcrumbs"
+    "e": [
+        "card"
     ],
-    "headers": [
+    "ph": [
         "Name", "Type", "Required", "Description"
     ],
-    "properties": [
+    "pd": [
         [
-            "new", 
+            "small", 
             "Boolean", 
             "No", 
-            "Applies 'new' class to badge"
+            "Adds small class."
+        ],
+        [
+            "medium", 
+            "Boolean", 
+            "No", 
+            "Adds medium class."
+        ],
+        [
+            "large", 
+            "Boolean", 
+            "No", 
+            "Adds large class."
+        ],
+        [
+            "panel", 
+            "Boolean", 
+            "No", 
+            "Adds panel class."
         ]
     ],
-    "mheaders": [
+    "mh": [
         "Name", 
         "Description"
     ],
-    "mproperties": []
+    "md": []
 }

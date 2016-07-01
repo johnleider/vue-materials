@@ -1,7 +1,7 @@
 <template>
     <app-nav>
         <div slot="logo">
-            <activator activates="side-nav" 
+            <activator activates="side-nav"
                        target="slide-out"
                        class="hide-on-med-and-down"
             >
@@ -15,7 +15,9 @@
                       slot="side-nav"
                       fixed
         >
-            <li v-for="item in items">
+            <li v-for="item in items"
+                :class="{'active': item === title_uppercase}"
+            >
                 <a href="#!"
                    v-text="item"
                    @click="click(item)"
