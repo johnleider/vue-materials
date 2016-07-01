@@ -19,6 +19,8 @@
     "file-loader": "^0.8.4",
     "json-loader": "^0.5.4",
     "materialize-css": "^0.97.6",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "vue-loader": "^9.0.0",
     "vue-resource": "^0.9.1",
