@@ -1,12 +1,12 @@
 <template>
     <span class="badge"
-          :class="options"
+          :class="classes"
     >
         <slot></slot>
     </span>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             new: {
@@ -16,7 +16,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'new': this.new
                 }

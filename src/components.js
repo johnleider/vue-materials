@@ -1,9 +1,8 @@
-import Activator from './components/activator.vue'
 import AppFooter from './components/footer.vue'
 import AppNav from './components/nav.vue'
 import AppSideNav from './components/side-nav.vue'
 import Badge from './components/badge.vue'
-import Breadcrumb from './components/breadcrumb.vue'
+import Breadcrumbs from './components/breadcrumbs.vue'
 import Btn from './components/button.vue'
 import BtnLink from './components/button-link.vue'
 import Card from './components/card.vue'
@@ -31,12 +30,11 @@ import Tab from './components/tab.vue'
 import Tabs from './components/tabs.vue'
 
 export default {
-    Activator,
     AppFooter,
     AppNav,
     AppSideNav,
     Badge,
-    Breadcrumb,
+    Breadcrumbs,
     Btn,
     BtnLink,
     Card,

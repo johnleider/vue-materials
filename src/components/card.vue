@@ -1,5 +1,5 @@
 <template>
-    <div :class="options">
+    <div :class="classes">
         <slot></slot>
     </div>
 </template>
@@ -29,7 +29,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'card': !this.panel,
                     'card-panel': this.panel,

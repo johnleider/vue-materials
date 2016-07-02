@@ -3,14 +3,14 @@
         :class="{ 'disabled': this.disabled }"
     >
         <a :href="target"
-           :class="options"
+           :class="classes"
         >
             <slot></slot>
         </a>
     </li>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             active: {
@@ -25,7 +25,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'active': this.active
                 }

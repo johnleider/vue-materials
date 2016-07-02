@@ -8,8 +8,14 @@
     </div>
 </template>
 
-<script>
+<script type="text/babel">
+    import IsLoadable from '../mixins/is-loadable'
+
     export default {
+        mixins: [
+            IsLoadable
+        ],
+
         props: {
             height: {
                 type: Number,
@@ -30,20 +36,8 @@
             }
         },
 
-        mounted () {
-            this.init()
-        },
-
         methods: {
             init () {
-                if (document.readyState === 'complete') {
-                    return this.$nextTick(() => this.load())
-                }
-
-                document.addEventListener('DOMContentLoaded', () => this.load())
-            },
-
-            load () {
                 $('.parallax').parallax()
             }
         }

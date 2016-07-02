@@ -2,14 +2,14 @@
     <li>
         <img :src="src">
         <div class="caption"
-             :class="options"
+             :class="classes"
         >
             <slot></slot>
         </div>
     </li>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             center: {
@@ -34,7 +34,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'left-align': this.left,
                     'center-align': this.center,

@@ -1,12 +1,12 @@
 <template>
     <ul class="collection"
-        :class="options"
+        :class="classes"
     >
         <slot></slot>
     </ul>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             withHeader: {
@@ -16,7 +16,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'with-header': this.withHeader
                 }

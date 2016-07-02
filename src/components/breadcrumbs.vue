@@ -13,13 +13,12 @@
     </nav>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             crumbs: {
                 type: Array,
-                default: () => {},
-                required: true
+                default: () => []
             }
         }
     }

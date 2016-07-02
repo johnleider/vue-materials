@@ -17,7 +17,7 @@ export default {
     },
 
     computed: {
-        options () {
+        collectionsMixin () {
             return {
                 'active': this.active,
                 'dismissable': this.dismissable,

@@ -1,22 +1,34 @@
 <template>
     <div class="carousel"
-         :class="options"
+         :class="classes"
+         :style="styles"
     >
         <slot></slot>
     </div>
 </template>
 
-<script>
+<script type="text/babel">
+    import IsLoadable from '../mixins/is-loadable'
+
     export default {
+        mixins: [
+            IsLoadable
+        ],
+        
         props: {
-            timeConstant: {
+            height: {
                 type: Number,
-                default: 200
+                default: 300
             },
 
             dist: {
                 type: Number,
                 default: -100
+            },
+            
+            timeConstant: {
+                type: Number,
+                default: 200
             },
 
             shift: {
@@ -41,9 +53,15 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'carousel-slider': this.slider
+                }
+            },
+
+            styles () {
+                return {
+                    'height': this.height
                 }
             },
 
@@ -58,20 +76,8 @@
             }
         },
 
-        mounted () {
-            this.init()
-        },
-
         methods: {
             init () {
-                if (document.readyState === 'complete') {
-                    return this.$nextTick(() => this.load())
-                }
-
-                document.addEventListener('DOMContentLoaded', () => this.load())
-            },
-
-            load () {
                 $(this.$el).carousel(this.params)
             },
 

@@ -12,7 +12,7 @@
     </ul>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             induration: {
@@ -52,7 +52,7 @@
         },
 
         computed: {
-            options () {
+            params () {
                 return {
                     inDuration: this.induration,
                     outDuration: this.outduration,

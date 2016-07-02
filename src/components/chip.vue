@@ -1,20 +1,44 @@
 <template>
-    <div class="chip">
+    <div class="chip"
+         v-if="!remove"
+    >
         <slot></slot>
-        <i class="material-icons"
-           v-if="close"
-        >
-            close
-        </i>
+        <icon v-if="close">close</icon>
     </div>
 </template>
 
 <script type="text/babel">
+    import IsLoadable from '../mixins/is-loadable'
+
     export default {
+        mixins: [
+            IsLoadable
+        ],
+
+        events: {
+            closed () {
+                this.remove = true
+            }
+        },
+
+        data () {
+            return {
+                remove: false
+            }
+        },
+
         props: {
             close: {
                 type: Boolean,
                 default: false
+            }
+        },
+
+        methods: {
+            init () {
+                if (this.remove) {
+                    this.$el.addEventListener('click', () => this.$emit('closed'))
+                }
             }
         }
     }

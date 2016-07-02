@@ -1,6 +1,6 @@
 <template>
     <div :id="id" 
-         :class="options"
+         :class="classes"
          class="modal"
     >
         <div class="modal-content">
@@ -12,7 +12,7 @@
     </div>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             bottomSheet: {
@@ -37,7 +37,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'bottom-sheet': this.bottomSheet,
                     'modal-fixed-footer': this.fixedFooter
@@ -48,10 +48,12 @@
         methods: {
             close () {
                 $(this.$el).closeModal()
+                this.$emit('closed')
             },
             
             open () {
                 $(this.$el).openModal()
+                this.$emit('openned')
             }
         }
     }

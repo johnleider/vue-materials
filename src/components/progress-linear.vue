@@ -1,12 +1,12 @@
 <template>
     <div class="progress">
-        <div :class="options" 
+        <div :class="classes" 
              :style="style"
         ></div>
     </div>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             determinate: {
@@ -26,7 +26,7 @@
         },
 
         methods: {
-            options () {
+            classes () {
                 return {
                     'determinate': this.determinate,
                     'indeterminate': this.indeterminate

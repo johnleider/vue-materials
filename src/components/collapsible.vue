@@ -1,14 +1,20 @@
 <template>
     <ul class="collapsible"
         :data-collapsible="type"
-        :class="options"
+        :class="classes"
     >
         <slot></slot>
     </ul>
 </template>
 
 <script type="text/babel">
+    import IsLoadable from '../mixins/is-loadable'
+
     export default {
+        mixins: [
+            IsLoadable
+        ],
+
         props: {
             collapsible: {
                 type: Boolean,
@@ -27,7 +33,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'popout': this.popout
                 }
@@ -45,18 +51,8 @@
             }
         },
 
-        mounted () {
-            this.init()
-        },
-
         methods: {
             init () {
-                if (document.readyState === 'complete') {
-                    return this.$nextTick(() => this.load())
-                }
-            },
-
-            load () {
                 $(this.$el).collapsible(this.params)
             }
         }

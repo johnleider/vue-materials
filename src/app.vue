@@ -1,73 +1,29 @@
 <template>
 	<div id="app">
-
-		<header>
-			<main-nav @click="page" 
-					  :items="items" 
-					  :title="component"
-		    ></main-nav>
-		</header>
-		
-		<main>
-        	<div  class="container docs"
-		          transition-mode="out-in"
-		          transition
-		          v-if="component"
-            >
-				<component :is="component" 
-						   keep-alive
-			    ></component>
-        		<docs :e="data.e" 
-	        		  :ph="data.ph" 
-	        		  :pd="data.pd" 
-	        		  :mh="data.mh" 
-	        		  :md="data.md"
-			     ></docs>
-        	</div>
-		</main>
-	</div>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <collapsible >
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>aFirst</div>
+                                <div class="collapsible-body"><p>Lorsem ipsum dolor sit amet.</p></div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>aFirst</div>
+                                <div class="collapsible-body"><p>Lorsem ipsum dolor sit amet.</p></div>
+                            </li>
+                        </callapsible>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </template>
 
 <script type="text/babel">
-    import menu from '../docs/data/items.json'	
-
 	export default {
-		name: 'App',
-
-		data () {
-			return {
-				component: '',
-				items: menu['items'],
-				doc_data: {},
-				data: {
-					e: [],
-					ph: [],
-					pd: [],
-					mh: [],
-					mp: []
-				}
-			}
-		},
-
-		mounted () {
-			this.init()
-			this.page('carousels')
-		},
-
-		methods: {
-			page (component) {
-				this.component = ''
-				this.data = this.doc_data[component]
-				this.$nextTick(() => this.component = component)
-			},
-
-			init () {
-				menu['items'].forEach((i) => {
-					let name = i.toLowerCase().replace(' ', '-')
-			    	this.doc_data[name] = require(`../docs/data/${name}.json`)
-			    })
-			}
-		}
+		name: 'App'
 	}
 </script>
 

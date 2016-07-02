@@ -1,26 +1,24 @@
-const load = (el, binding) => {
-    const position = typeof binding.arg !== 'undefined'
-            ? binding.arg
-            : 'bottom'
-            
+import Load from '../util/load'
+
+const tooltip = (el, binding, vnode) => {
     const delay = typeof binding.modifiers !== 'undefined'
         ? Object.keys(binding.modifiers)[0]
         : 50
 
-    const tooltip = binding.expression
-
     el.classList.add('tooltipped')
-    el.setAttribute('data-position', position)
+    el.setAttribute('data-position', binding.arg)
     el.setAttribute('data-delay', delay)
-    el.setAttribute('data-tooltip', tooltip)
-}
+    el.setAttribute('data-tooltip', binding.expression)
+
+    Load.call(vnode.context, () => $(el).tooltip())
+} 
 
 export default {
     bind (el, binding, vnode) {
-        load(el, binding)
+        tooltip(el, binding, vnode)
     },
 
-    postupdate (el, binding) {
-        load(el, binding)
+    postupdate (el, binding, vnode) {
+        tooltip(el, binding, vnode)
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <li :class="options">
+    <li :class="classes">
         <slot></slot>
         <a href="#!" 
            class="secondary-content"
@@ -9,10 +9,18 @@
     </li>
 </template>
 
-<script>
+<script type="text/babel">
     import CollectionItem from '../mixins/collection-item'
 
     export default {
-        mixins: [CollectionItem]
+        mixins: [
+            CollectionItem
+        ],
+
+        computed: {
+            classes () {
+                return this.collectionsMixin
+            }
+        }
     }
 </script>

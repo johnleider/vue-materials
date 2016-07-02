@@ -1,6 +1,6 @@
 <template>
     <div class="slider"
-         :class="options"
+         :class="classes"
     >
         <ul class="slides">
             <slot></slot>
@@ -8,8 +8,14 @@
     </div>
 </template>
 
-<script>
+<script type="text/babel">
+    import IsLoadable from '../mixins/is-loadable'
+
     export default {
+        mixins: [
+            IsLoadable
+        ],
+
         props: {
             fullWidth: {
                 type: Boolean,
@@ -38,7 +44,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'fullscreen': this.fullWidth
                 }
@@ -55,20 +61,8 @@
             }
         },
 
-        mounted () {
-            this.init()
-        },
-
         methods: {
             init () {
-                if (document.readyState === 'complete') {
-                    return this.load()
-                }
-                
-                document.addEventListener('DOMContentLoaded', () => this.load())
-            },
-
-            load () {
                 $(this.$el).slider(this.params)
             },
 

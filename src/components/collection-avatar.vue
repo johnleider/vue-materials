@@ -1,6 +1,6 @@
 <template>
     <li class="avatar"
-        :class="options"
+        :class="classes"
     >
         <img :src="src" class="circle">
         <slot></slot>
@@ -12,16 +12,24 @@
     </li>
 </template>
 
-<script>
+<script type="text/babel">
     import CollectionItem from '../mixins/collection-item'
 
     export default {
-        mixins: [CollectionItem],
+        mixins: [
+            CollectionItem
+        ],
 
         props: {
             src: {
                 type: String,
                 required: true
+            }
+        },
+
+        computed: {
+            classes () {
+                return this.collectionsMixin
             }
         }
     }

@@ -4,8 +4,14 @@
     </ul>
 </template>
 
-<script>
+<script type="text/babel">
+    import IsLoadable from '../mixins/is-loadable'
+
     export default {
+        mixins: [
+            IsLoadable
+        ],
+
         props: {
             selected: {
                 type: String,
@@ -13,22 +19,10 @@
             }
         },
 
-        mounted () {
-            this.init()
-        },
-
         methods: {
             init () {
                 if (!this.selected) return
 
-                if (document.readyState === 'complete') {
-                    return this.$nextTick(() => this.load())
-                }
-
-                document.addEventListener('DOMContentLoaded', () => this.load())
-            },
-
-            load () {
                 $(this.$el).tabs('select_tab', this.selected)
             }
         }

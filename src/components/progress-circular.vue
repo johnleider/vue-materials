@@ -1,6 +1,6 @@
 <template>
     <div class="preloader-wrapper active"
-         :class="options"
+         :class="classes"
     >
         <div class="spinner-layer">
             <div class="circle-clipper left">
@@ -14,7 +14,7 @@
     </div>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             blue: {
@@ -69,7 +69,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'small': this.small,
                     'large': this.large,

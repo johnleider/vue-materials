@@ -6,8 +6,14 @@
     >
 </template>
 
-<script>
+<script type="text/babel">
+    import IsLoadable from '../mixins/is-loadable'
+
     export default {
+        mixins: [
+            IsLoadable
+        ],
+
         props: {
             caption: {
                 type: String,
@@ -22,6 +28,12 @@
             width: {
                 type: Number,
                 required: true
+            }
+        },
+
+        methods: {
+            init () {
+                $(this.$el).materialbox()
             }
         }
     }

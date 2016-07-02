@@ -1,5 +1,5 @@
 <template>
-    <li :class="options"
+    <li :class="classes"
         @click.prevent="click"
     >
         <a href="#!">
@@ -8,7 +8,7 @@
     </li>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             active: {
@@ -33,7 +33,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'active': this.active,
                     [this.color]: this.active,

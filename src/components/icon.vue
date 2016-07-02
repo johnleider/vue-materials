@@ -1,12 +1,12 @@
 <template>
     <i class="material-icons"
-       :class="options"
+       :class="classes"
     >
         <slot></slot>
     </i>
 </template>
 
-<script>
+<script type="text/babel">
     export default {
         props: {
             tiny: {
@@ -31,7 +31,7 @@
         },
 
         computed: {
-            options () {
+            classes () {
                 return {
                     'tiny': this.tiny,
                     'small': this.small,
