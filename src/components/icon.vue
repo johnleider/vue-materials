@@ -27,6 +27,11 @@
             large: {
                 type: Boolean,
                 default: false
+            },
+
+            prefix: {
+                type: Boolean,
+                default: false
             }
         },
 
@@ -36,7 +41,8 @@
                     'tiny': this.tiny,
                     'small': this.small,
                     'medium': this.medium,
-                    'large': this.large
+                    'large': this.large,
+                    'prefix': this.prefix
                 }
             }
         }

@@ -4,16 +4,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col s12">
-                        <collapsible >
-                            <li>
-                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>aFirst</div>
-                                <div class="collapsible-body"><p>Lorsem ipsum dolor sit amet.</p></div>
-                            </li>
-                            <li>
-                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>aFirst</div>
-                                <div class="collapsible-body"><p>Lorsem ipsum dolor sit amet.</p></div>
-                            </li>
-                        </callapsible>
+                        <form action="">
+                            <div class="input-field">
+                            
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -23,7 +18,19 @@
 
 <script type="text/babel">
 	export default {
-		name: 'App'
+		name: 'App',
+
+        data () {
+            return {
+                selected: false
+            }
+        },
+
+        methods: {
+            testing (val) {
+                this.search = val
+            }
+        }
 	}
 </script>
 

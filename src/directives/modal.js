@@ -11,5 +11,9 @@ export default {
         }
 
         Load.call(vnode.context, () => $(el).leanModal(params))
+    },
+
+    unbind (el) {
+        el.removeEventListener('click')
     }
 }

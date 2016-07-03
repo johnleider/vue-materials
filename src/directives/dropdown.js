@@ -7,5 +7,9 @@ export default {
         el.setAttribute('data-activates', binding.arg)
 
         Load.call(vnode.context, () => $(el).dropdown(params))
+    },
+
+    unbind (el) {
+        el.removeEventListener('click')
     }
 }
