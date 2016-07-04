@@ -6,7 +6,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-materials.js'
+    filename: 'vue-materials.js',
+    library: 'vue-materials',
+    libraryTarget: 'umd'
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
