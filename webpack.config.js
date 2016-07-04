@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'vue-materials.js'
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),
@@ -36,10 +36,6 @@ module.exports = {
       {
           test: /\.(eot|svg|ttf|woff|woff2)$/,
           loader: 'file?name=/fonts/[name].[ext]'
-      },
-      {
-          test: /\.json$/,
-          loader: 'json'
       }
     ]
   },
