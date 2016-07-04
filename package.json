@@ -1,11 +1,13 @@
 {
-  "name": "vue-materialize",
+  "name": "vue-materials",
   "description": "A Vue.js project",
   "author": "John Leider <john.j.leider@gmail.com>",
-  "private": true,
+  "version": "0.0.27-alpha.1",
+  "private": false,
+  "main": "src/index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --host=0.0.0.0",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
     "vue": "^2.0.0-alpha.8"
