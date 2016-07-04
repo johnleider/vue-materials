@@ -1,11 +1,7 @@
-import Components from './components'
+import Components from './components/index'
+import Directives from './directives/index'
 import Dialog from './util/dialog'
 import ScrollFire from './util/scroll-fire'
-import Tooltip from './directives/tooltip'
-import Dropdown from './directives/dropdown'
-import Modal from './directives/modal'
-import SideNav from './directives/side-nav'
-import Select from './directives/select'
 
 function plugin(Vue) {
     if (plugin.installed) {
@@ -16,11 +12,9 @@ function plugin(Vue) {
         Vue.component(key, Components[key])
     }
 
-    Vue.directive('tooltip', Tooltip)
-    Vue.directive('dropdown', Dropdown)
-    Vue.directive('modal', Modal)
-    Vue.directive('side-nav', SideNav)
-    Vue.directive('select', Select)
+    for (let key in Directives) {
+        Vue.directive(key, Directives[key])
+    }
 
     Vue.dialog = Dialog
     Vue.scrollFire = ScrollFire
