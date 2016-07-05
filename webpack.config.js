@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-materials.js',
+    filename: 'vue-materials.common.js',
     library: 'vue-materials',
     libraryTarget: 'umd'
   },
