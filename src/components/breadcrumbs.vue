@@ -2,7 +2,7 @@
     <nav>
         <div class="nav-wrapper">
             <div class="col s12">
-                <a v-for="crumb in crumbs"
+                <a v-for="crumb in items"
                    :href="crumb.href" 
                    class="breadcrumb"
                 >
@@ -17,7 +17,7 @@
 <script type="text/babel">
     export default {
         props: {
-            crumbs: {
+            items: {
                 type: Array,
                 default: () => []
             }
