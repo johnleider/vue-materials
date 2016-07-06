@@ -4,8 +4,7 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, '../dist'),
     filename: 'vue-materials.common.js',
     library: 'VueMaterials',
     libraryTarget: 'commonjs'

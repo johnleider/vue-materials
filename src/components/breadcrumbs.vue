@@ -8,6 +8,7 @@
                 >
                     {{ crumb.text }}    
                 </a>
+                <slot></slot>
             </div>
         </div>
     </nav>

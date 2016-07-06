@@ -1,8 +1,11 @@
 <template>
-    <div class="carousel"
+    <div class="carousel "
          :class="classes"
          :style="styles"
     >
+        <carousel-item v-for="src in srcs"
+                       :src="src"
+        ></carousel-item>
         <slot></slot>
     </div>
 </template>
@@ -49,6 +52,11 @@
             slider: {
                 type: Boolean,
                 default: false
+            },
+
+            srcs: {
+                type: Array,
+                default: () => []
             }
         },
 
