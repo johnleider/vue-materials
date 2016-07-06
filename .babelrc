@@ -1,3 +1,13 @@
 {
-  "presets": ["es2015"]
+  "env": {
+    "development": {
+      "presets": ["es2015"]
+    },
+    "production": {
+      "presets": ["es2015-rollup-vue"]
+    }
+  },
+  "ignore": [
+    "dist/*.js"
+  ]
 }
