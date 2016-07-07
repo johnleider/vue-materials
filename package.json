@@ -2,12 +2,12 @@
   "name": "vue-materials",
   "description": "Materialize.css components for Vue JS",
   "author": "John Leider <john.j.leider@gmail.com>",
-  "version": "0.0.43-alpha.1",
+  "version": "0.0.44-alpha.1",
   "private": false,
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --host=0.0.0.0 --config=build/webpack.dev.config.js",
-    "build": "NODE_ENV=production node build/build.js"
+    "build": "cross-env NODE_ENV=production webpack  --progress --hide-modules --config=build/webpack.config.js"
   },
   "dependencies": {
     "vue": "^2.0.0-alpha.8"
