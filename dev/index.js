@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Materials from '../dist/vue-materials.common.js'
+import Materials from '../src/index.js'
 import App from './app.vue'
 
 Vue.use(Materials)

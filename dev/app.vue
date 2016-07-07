@@ -1,6 +1,15 @@
 <template>
     <div>
-        <carousel :srcs="srcs"></carousel>
+        <tabs v-if="show">
+            <tab target="#target1">Click me</tab>
+            <tab target="#target2">Click me 2</tab>
+        </tabs>
+        <div id="target1">
+            hi
+        </div>
+        <div id="target2">
+            hi2
+        </div>
     </div>
 </template>
 
@@ -8,13 +17,21 @@
     export default {
         data () {
             return {
-                srcs: [
-                    "http://lorempixel.com/250/250/nature/1",
-                    "http://lorempixel.com/250/250/nature/2",
-                    "http://lorempixel.com/250/250/nature/3",
-                    "http://lorempixel.com/250/250/nature/4"
-                ]
+                show: true
             }
+        },
+
+        mounted () {
+            console.log('show')
+            setTimeout(() => {
+            console.log('hide')
+                this.show = false
+
+                setTimeout(() => {
+            console.log('show')
+                    this.show = true   
+                }, 2000)
+            }, 2000)
         }
     }
 </script>
