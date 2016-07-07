@@ -21,9 +21,13 @@
 
         methods: {
             init () {
-                if (!this.selected) return
+                let params = []
 
-                $(this.$el).tabs('select_tab', this.selected)
+                if (!this.selected) {
+                   params = ['select_tab', this.selected]
+                }
+
+                $(this.$el).tabs(...params)
             }
         }
     }
