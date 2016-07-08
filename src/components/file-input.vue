@@ -2,7 +2,9 @@
     <div class="file-field input-field">
         <div class="btn">
             <span>File</span>
-            <input type="file">
+            <input type="file"
+                   :multiple="multiple"
+            >
         </div>
         <div class="file-path-wrapper">
             <text-input class="file-path validate"></text-input>
@@ -12,6 +14,11 @@
 
 <script type="text/babel">
     export default {
-        // TODO add multiple functionality
+        props: {
+            multiple: {
+                type: Boolean,
+                default: false
+            }
+        }
     }
 </script>

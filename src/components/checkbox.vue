@@ -3,9 +3,9 @@
       <input type="checkbox"
              :id="id"
              :name="name"
-             :value="value"
              :disabled="disabled"
              :class="classes"
+             ref="checkbox"
       >
       <label :for="id">
           <slot></slot>
@@ -26,10 +26,15 @@
             },
 
             value: {
-                type: String
+                type: Boolean
             },
 
             disabled: {
+                type: Boolean,
+                default: false
+            },
+
+            indeterminate: {
                 type: Boolean,
                 default: false
             },
@@ -45,6 +50,21 @@
                 return {
                     'filled-in': this.filledIn
                 }
+            }
+        },
+
+        mounted () {
+            if (this.indeterminate) {
+                this.$refs.checkbox.indeterminate = true
+            }
+
+            if (this.value) {
+                this.$refs.checkbox.setAttribute('checked', true)
+            }
+
+            const vm = this
+            this.$refs.checkbox.onchange = function () {
+                vm.$emit('input', this.checked)
             }
         }
     }

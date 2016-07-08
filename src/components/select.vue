@@ -42,8 +42,31 @@
 
                 const vm = this
                 this.$el.onchange = function () {
-                    vm.$emit('input', this.value)
+                    if (!this.hasAttribute('multiple')) {
+                        vm.$emit('input', this.value)
+                    } else {
+                        vm.multiple(this, vm)
+                    }
                 }
+            },
+
+            multiple (context, vm) {
+                const siblings = [...vm.$el.previousSibling.getElementsByClassName('active')].map(i => {
+                    return i.getElementsByTagName('label')[0].nextSibling.nodeValue
+                })
+
+                const options = [...context.getElementsByTagName('option')]
+                let array = []
+                
+                siblings.forEach(i => {
+                    const option = options.find(j => j.textContent == i)
+                    
+                    if (option) {
+                        array.push(option.value)
+                    }
+                })
+
+                vm.$emit('input', array)
             }
         }
     }

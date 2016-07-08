@@ -1,11 +1,16 @@
 <template>
     <input class="validate"
            type="text"
+           :length="length"
     >
 </template>
 
 <script type="text/babel">
+    import Counter from '../mixins/counter'
+
     export default {
-        // TODO add length functionality
+        mixins: [
+            Counter
+        ]
     }
 </script>

@@ -35,6 +35,7 @@ import Slide from './slide.vue'
 import Switch from './switch.vue'
 import Tab from './tab.vue'
 import Tabs from './tabs.vue'
+import TextArea from './text-area.vue'
 import TextInput from './text-input.vue'
 
 export default {
@@ -75,5 +76,6 @@ export default {
     Switch,
     Tab,
     Tabs,
+    TextArea,
     TextInput
 }

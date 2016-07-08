@@ -3,9 +3,10 @@
       <input type="radio"
              :id="id"
              :name="name"
-             :value="value"
              :disabled="disabled"
              :class="classes"
+             :value="val"
+             ref="radio"
       >
       <label :for="id">
           <slot></slot>
@@ -25,8 +26,12 @@
                 type: String
             },
 
+            val: {
+                type: [String, Number]
+            },
+
             value: {
-                type: String
+                type: [String, Number]
             },
 
             disabled: {
@@ -45,6 +50,17 @@
                 return {
                     'with-gap': this.withGap
                 }
+            }
+        },
+
+        mounted () {
+            if (this.$refs.radio.value === this.value) {
+                this.$refs.radio.setAttribute('checked', true)
+            }
+
+            const vm = this
+            this.$refs.radio.onchange = function () {
+                vm.$emit('input', this.value)
             }
         }
     }
