@@ -4,6 +4,9 @@
                 disabled
                 selected
         >Choose your options</option>
+        <option v-for="item in items"
+                :value="item.id"
+        >{{ item.text }}</option>
         <slot></slot>
     </select>
 </template>
@@ -13,6 +16,13 @@
     import BrowserDefault from '../mixins/browser-default'
 
     export default {
+        props: {
+            items: {
+                type: Array,
+                default: () => []
+            }
+        },
+
         mixins: [
             BrowserDefault,
             IsLoadable
@@ -30,13 +40,10 @@
             init () {
                 $(this.$el).material_select()
 
-
-                // TODO: Need to update this when bug is fixed
-                // for emitting input data
-                // const vm = this
-                // this.$el.onchange = function () {
-                //     vm.$emit('input', this.value)
-                // }
+                const vm = this
+                this.$el.onchange = function () {
+                    vm.$emit('input', this.value)
+                }
             }
         }
     }
