@@ -10,7 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack  --progress --hide-modules --config=build/webpack.config.js"
   },
   "dependencies": {
-    "vue": "^2.0.0-alpha.8"
+    "vue": "^2.0.0-beta.1"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -30,7 +30,7 @@
     "style-loader": "^0.13.1",
     "uglify-js": "^2.7.0",
     "vue-hot-reload-api": "^2.0.5",
-    "vue-loader": "^9.0.0",
+    "vue-loader": "^9.1.2",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.12.0"
   }
