@@ -16,7 +16,7 @@
 
         props: {
             caption: {
-                type: String,
+                type: [Boolean, String],
                 default: false
             },
 
@@ -26,8 +26,8 @@
             },
 
             width: {
-                type: Number,
-                required: true
+                type: [Boolean, Number, String],
+                default: false
             }
         },
 
