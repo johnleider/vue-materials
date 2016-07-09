@@ -6,9 +6,3 @@
         </div>
     </footer>
 </template>
-
-<script type="text/babel">
-    export default {
-        //
-    }
-</script>

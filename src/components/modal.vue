@@ -48,12 +48,12 @@
         methods: {
             close () {
                 $(this.$el).closeModal()
-                this.$emit('closed')
+                this.$emit('close')
             },
             
             open () {
                 $(this.$el).openModal()
-                this.$emit('openned')
+                this.$emit('open')
             }
         }
     }

@@ -47,7 +47,7 @@
 
             type () {
                 if (this.collapsible) return 'accordion'
-                if (this.expandable) return 'expandable'
+                if (this.expandable)  return 'expandable'
             }
         },
 

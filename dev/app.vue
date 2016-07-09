@@ -1,15 +1,7 @@
 <template>
-    <div>
-        <tabs v-if="show">
-            <tab target="#target1">Click me</tab>
-            <tab target="#target2">Click me 2</tab>
-        </tabs>
-        <div id="target1">
-            hi
-        </div>
-        <div id="target2">
-            hi2
-        </div>
+    <div class="container">
+        <pagination :length="10" v-model="selected"></pagination>
+        {{ selected }}
     </div>
 </template>
 
@@ -17,21 +9,31 @@
     export default {
         data () {
             return {
-                show: true
+                items: [
+                    {
+                        id: 1,
+                        text: 'Num1'
+                    },
+                    {
+                        id: 2,
+                        text: 'Num2'
+                    },
+                    {
+                        id: 3,
+                        text: 'Num3'
+                    },
+                    {
+                        id: 4,
+                        text: 'Num4'
+                    }
+                ],
+                range: '14 July, 2016',
+                selected: 1,
+                width: '45%'
             }
         },
 
         mounted () {
-            console.log('show')
-            setTimeout(() => {
-            console.log('hide')
-                this.show = false
-
-                setTimeout(() => {
-            console.log('show')
-                    this.show = true   
-                }, 2000)
-            }, 2000)
         }
     }
 </script>

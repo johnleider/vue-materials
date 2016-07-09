@@ -2,7 +2,9 @@
     <li class="avatar"
         :class="classes"
     >
-        <img :src="src" class="circle">
+        <img :src="src" 
+             class="circle"
+        >
         <slot></slot>
         <a href="#!" 
            class="secondary-content"

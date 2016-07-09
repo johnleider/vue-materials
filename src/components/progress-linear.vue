@@ -19,13 +19,16 @@
                 default: false
             },
 
+            value: {
+                type: [String]
+            },
+
             width: {
-                type: Number,
-                default: false
+                type: [String]
             }
         },
 
-        methods: {
+        computed: {
             classes () {
                 return {
                     'determinate': this.determinate,
@@ -34,10 +37,14 @@
             },
 
             style () {
-                if (this.width === false) return {}
+                if (!this.width && !this.value) {
+                    return {}
+                }
+
+                const value = this.value ? this.value : this.width
 
                 return {
-                    'width': `${this.width}%`
+                    'width': value
                 }
             }
         }

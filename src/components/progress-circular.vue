@@ -1,13 +1,15 @@
 <template>
-    <div class="preloader-wrapper active"
+    <div class="preloader-wrapper"
          :class="classes"
     >
         <div class="spinner-layer">
             <div class="circle-clipper left">
                 <div class="circle"></div>
-                </div><div class="gap-patch">
+            </div>
+            <div class="gap-patch">
                 <div class="circle"></div>
-                </div><div class="circle-clipper right">
+            </div>
+            <div class="circle-clipper right">
                 <div class="circle"></div>
             </div>
         </div>
@@ -17,6 +19,11 @@
 <script type="text/babel">
     export default {
         props: {
+            active: {
+                type: Boolean,
+                default: false
+            },
+
             blue: {
                 type: Boolean,
                 default: false
@@ -71,6 +78,7 @@
         computed: {
             classes () {
                 return {
+                    'active': this.active,
                     'small': this.small,
                     'large': this.large,
                     'spinner-blue-only': this.blue,

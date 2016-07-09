@@ -33,12 +33,12 @@
         methods: {
             open () {
                 $(this.$el).openFAB()
-                this.$emit('openned')
+                this.$emit('open')
             },
 
             close () {
                 $(this.$el).closeFAB()
-                this.$emit('closed')
+                this.$emit('close')
             }
         }
     }

@@ -10,5 +10,9 @@ export default {
 
     mounted () {
         Load.call(this, () => $(this.$el).characterCounter())
+    },
+
+    postupdate () {
+        Load.call(this, () => $(this.$el).characterCounter())
     }
 }

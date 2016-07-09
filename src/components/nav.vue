@@ -7,9 +7,3 @@
         </div>
     </nav>
 </template>
-
-<script type="text/babel">
-    export default {
-        //
-    }
-</script>

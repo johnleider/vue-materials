@@ -68,18 +68,22 @@
 
             pause () {
                 $(this.$el).slider('pause')
+                this.$emit('pause')
             },
 
             start () {
                 $(this.$el).slider('start')
+                this.$emit('start')
             },
 
             next () {
                 $(this.$el).slider('next')
+                this.$emit('next')
             },
 
             prev () {
                 $(this.$el).slider('prev')
+                this.$emit('prev')
             }
         }
     }

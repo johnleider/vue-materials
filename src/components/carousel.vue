@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel "
+    <div class="carousel"
          :class="classes"
          :style="styles"
     >
@@ -91,10 +91,12 @@
 
             next (n = 1) {
                 $(this.$el).carousel('next', [n])
+                this.$emit('next')
             },
 
             prev (n = 1) {
                 $(this.$el).carousel('prev', [n])
+                this.$emit('prev')
             }
         }
     }

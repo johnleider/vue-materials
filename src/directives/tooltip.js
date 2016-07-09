@@ -20,10 +20,5 @@ export default {
 
     postupdate (el, binding, vnode) {
         tooltip(el, binding, vnode)
-    },
-
-    unbind (el) {
-        el.removeEventListener('mouseenter')
-        el.removeEventListener('mouseleave')
     }
 }

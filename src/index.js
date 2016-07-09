@@ -1,5 +1,5 @@
-import Components from './components/index'
-import Directives from './directives/index'
+import Components from './components/_index'
+import Directives from './directives/_index'
 import Dialog from './util/dialog'
 import ScrollFire from './util/scroll-fire'
 

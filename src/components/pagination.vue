@@ -1,20 +1,20 @@
 <template>
     <ul class="pagination">
-        <pagination-item :disabled="active === 1"
+        <pagination-item :disabled="value === 1"
                          @click="prev"
         >
             <i class="material-icons">chevron_left</i>
         </pagination-item>
         <pagination-item v-if="length > 0"
                          v-for="n in length"
-                         :active="active === n"
+                         :active="value === n"
                          :waves="waves"
                          :color="color"
                          @click="page(n)"
         >
             {{ n }}
         </pagination-item>
-        <pagination-item :disabled="active === length"
+        <pagination-item :disabled="value === length"
                          @click="next"
         >
             <i class="material-icons">chevron_right</i>
@@ -26,7 +26,12 @@
     export default {
         props: {
             active: {
-                type: Number,
+                type: Boolean,
+                default: false
+            },
+
+            value: {
+                type: [Number, String],
                 default: 0
             },
 
@@ -48,15 +53,15 @@
 
         methods: {
             next () {
-                this.$emit('next')
+                this.$emit('input', this.value + 1)
             },
 
             page (n) {
-                this.$emit('page', n)
+                this.$emit('input', n)
             },
 
             prev () {
-                this.$emit('prev')
+                this.$emit('input', this.value - 1)
             }
         }
     }
