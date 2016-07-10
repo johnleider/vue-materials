@@ -1,6 +1,6 @@
 <template>
     <div class="preloader-wrapper"
-         :class="{ 'active': this.active }"
+         :class="wrapper_classes"
     >
         <div class="spinner-layer"
              :class="classes"
@@ -80,8 +80,6 @@
         computed: {
             classes () {
                 return {
-                    'small': this.small,
-                    'large': this.large,
                     'spinner-blue-only': this.blue,
                     'spinner-red-only': this.red,
                     'spinner-green-only': this.green,
@@ -90,6 +88,14 @@
                     'spinner-red': this.redFlash,
                     'spinner-green': this.greenFlash,
                     'spinner-yellow': this.yellowFlash
+                }
+            },
+
+            wrapper_classes () {
+                return {
+                    'active': this.active,
+                    'small': this.small,
+                    'large': this.large
                 }
             }
         }
