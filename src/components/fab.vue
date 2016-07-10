@@ -5,7 +5,7 @@
         <btn-link large
                   floating
         >
-            <slot name="icon"></slot>
+            <icon>{{ icon }}</icon>
         </btn-link>
         <slot name="items"></slot>
     </div>
@@ -14,6 +14,11 @@
 <script type="text/babel">
     export default {
         props: {
+            icon: {
+                type: String,
+                required: true
+            },
+            
             horizontal: {
                 type: Boolean,
                 default: false
