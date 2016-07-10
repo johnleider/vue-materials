@@ -1,5 +1,6 @@
 import Components from './components/_index'
 import Directives from './directives/_index'
+import Functional from './components/functional/_index'
 import Dialog from './util/dialog'
 import ScrollFire from './util/scroll-fire'
 
@@ -8,6 +9,10 @@ function plugin(Vue) {
 
     for (let key in Components) {
         Vue.component(key, Components[key])
+    }
+    
+    for (let key in Functional) {
+        Vue.component(key, Functional[key])
     }
 
     for (let key in Directives) {
