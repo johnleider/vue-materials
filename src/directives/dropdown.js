@@ -3,8 +3,10 @@ import Load from '../util/load'
 export default {
     bind (el, binding, vnode) {
         Load.call(vnode.context, () => {
-            el.setAttribute('data-activates', binding.expression || {})
-            $(el).dropdown(binding.args || {})
+            const params = binding.expression || {}
+
+            el.setAttribute('data-activates', binding.arg)
+            $(el).dropdown()
         })
     }
 }
