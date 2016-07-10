@@ -22,11 +22,13 @@
             },
 
             name: {
-                type: String
+                type: String,
+                required: true
             },
 
             value: {
-                type: Boolean
+                type: Boolean,
+                required: false
             },
 
             disabled: {

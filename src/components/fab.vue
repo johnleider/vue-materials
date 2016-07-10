@@ -2,7 +2,11 @@
     <div class="fixed-action-btn"
          :class="classes"
     >
-        <slot name="btn"></slot>
+        <btn-link large
+                  floating
+        >
+            <slot name="icon"></slot>
+        </btn-link>
         <slot name="items"></slot>
     </div>
 </template>

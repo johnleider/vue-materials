@@ -13,7 +13,6 @@
 
 <script type="text/babel">
     import IsLoadable from '../mixins/is-loadable'
-    import BrowserDefault from '../mixins/browser-default'
 
     export default {
         props: {
@@ -24,17 +23,8 @@
         },
 
         mixins: [
-            BrowserDefault,
             IsLoadable
         ],
-
-        computed: {
-            classes () {
-                return Object.assign(
-                    this.defaultsMixin
-                )
-            }
-        },
 
         methods: {
             init () {

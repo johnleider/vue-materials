@@ -3,7 +3,7 @@ import Load from '../util/load'
 export default {
     props: {
         length: {
-            type: [Number, String, Boolean],
+            type: [Boolean, Number, String],
             default: false
         }
     },

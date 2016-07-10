@@ -1,8 +1,10 @@
 <template>
     <div class="preloader-wrapper"
-         :class="classes"
+         :class="{ 'active': this.active }"
     >
-        <div class="spinner-layer">
+        <div class="spinner-layer"
+             :class="classes"
+        >
             <div class="circle-clipper left">
                 <div class="circle"></div>
             </div>
@@ -78,7 +80,6 @@
         computed: {
             classes () {
                 return {
-                    'active': this.active,
                     'small': this.small,
                     'large': this.large,
                     'spinner-blue-only': this.blue,

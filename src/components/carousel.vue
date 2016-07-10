@@ -3,8 +3,8 @@
          :class="classes"
          :style="styles"
     >
-        <carousel-item v-for="src in srcs"
-                       :src="src"
+        <carousel-item v-for="i in items"
+                       :src="i"
         ></carousel-item>
         <slot></slot>
     </div>
@@ -54,7 +54,7 @@
                 default: false
             },
 
-            srcs: {
+            items: {
                 type: Array,
                 default: () => []
             }

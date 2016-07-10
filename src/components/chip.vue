@@ -16,7 +16,7 @@
         ],
 
         events: {
-            closed () {
+            close () {
                 this.remove = true
             }
         },
@@ -37,7 +37,7 @@
         methods: {
             init () {
                 if (this.remove) {
-                    this.$el.addEventListener('click', () => this.$emit('closed'))
+                    this.$el.addEventListener('click', () => this.$emit('close'))
                 }
             }
         }

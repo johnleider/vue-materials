@@ -10,16 +10,6 @@ export default {
             default: false
         },
 
-        wavesRed: {
-            type: Boolean,
-            default: false
-        },
-
-        wavesYellow: {
-            type: Boolean,
-            default: false
-        },
-
         wavesOrange: {
             type: Boolean,
             default: false
@@ -36,6 +26,16 @@ export default {
         },
 
         wavesTeal: {
+            type: Boolean,
+            default: false
+        },
+
+        wavesRed: {
+            type: Boolean,
+            default: false
+        },
+
+        wavesYellow: {
             type: Boolean,
             default: false
         }

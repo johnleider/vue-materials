@@ -27,7 +27,7 @@
 
             width: {
                 type: [Boolean, Number, String],
-                default: false
+                default: '100%'
             }
         },
 

@@ -20,11 +20,11 @@
             },
 
             value: {
-                type: [String]
+                type: [String, Number]
             },
 
             width: {
-                type: [String]
+                type: [String, Number]
             }
         },
 
