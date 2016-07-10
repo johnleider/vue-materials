@@ -32,6 +32,16 @@
             prefix: {
                 type: Boolean,
                 default: false
+            },
+
+            right: {
+                type: Boolean,
+                default: false
+            },
+
+            left: {
+                type: Boolean,
+                default: false
             }
         },
 
@@ -42,7 +52,9 @@
                     'small': this.small,
                     'medium': this.medium,
                     'large': this.large,
-                    'prefix': this.prefix
+                    'prefix': this.prefix,
+                    'right': this.right,
+                    'left': this.left
                 }
             }
         }
