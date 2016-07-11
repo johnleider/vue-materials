@@ -1,6 +1,6 @@
-import AppFooter from './footer.vue'
-import AppNav from './nav.vue'
-import AppSideNav from './side-nav.vue'
+import MFooter from './footer.vue'
+import MNav from './nav.vue'
+import MSideNav from './side-nav.vue'
 import Badge from './badge.vue'
 import Breadcrumbs from './breadcrumbs.vue'
 import Btn from './button.vue'
@@ -41,9 +41,9 @@ import TextArea from './text-area.vue'
 import TextInput from './text-input.vue'
 
 export default {
-    AppFooter,
-    AppNav,
-    AppSideNav,
+    MFooter,
+    MNav,
+    MSideNav,
     Badge,
     Breadcrumbs,
     Btn,
