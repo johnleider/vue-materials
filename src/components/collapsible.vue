@@ -16,12 +16,12 @@
         ],
 
         props: {
-            collapsible: {
+            collapse: {
                 type: Boolean,
                 default: false
             },
 
-            expandable: {
+            expand: {
                 type: Boolean,
                 default: false
             },
@@ -46,8 +46,8 @@
             },
 
             type () {
-                if (this.collapsible) return 'accordion'
-                if (this.expandable)  return 'expandable'
+                if (this.collapse) return 'accordion'
+                if (this.expand)  return 'expandable'
             }
         },
 
