@@ -11,14 +11,11 @@ import CarouselItem from './carousel-item.vue'
 import Checkbox from './checkbox.vue'
 import Chip from './chip.vue'
 import Collapsible from './collapsible.vue'
-import CollapsibleHeader from './collapsible-header.vue'
-import CollapsibleBody from './collapsible-body.vue'
 import Collection from './collection.vue'
 import CollectionItem from './collection-item.vue'
 import CollectionLink from './collection-link.vue'
 import CollectionAvatar from './collection-avatar.vue'
 import DateInput from './date-input.vue'
-import Dropdown from './dropdown.vue'
 import FileInput from './file-input.vue'
 import Icon from './icon.vue'
 import MaterialBox from './material-box.vue'
@@ -53,15 +50,12 @@ export default {
     CarouselItem,
     Chip,
     Collapsible,
-    CollapsibleHeader,
-    CollapsibleBody,
     Collection,
     CollectionItem,
     Checkbox,
     CollectionLink,
     CollectionAvatar,
     DateInput,
-    Dropdown,
     FileInput,
     Icon,
     MaterialBox,
