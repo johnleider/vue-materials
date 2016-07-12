@@ -8,7 +8,7 @@ const tooltip = (el, binding, vnode) => {
     el.classList.add('tooltipped')
     el.setAttribute('data-position', binding.arg)
     el.setAttribute('data-delay', delay)
-    el.setAttribute('data-tooltip', binding.expression)
+    el.setAttribute('data-tooltip', binding.expression.replace(/\'/g, ''))
 
     Load.call(vnode.context, () => $(el).tooltip())
 } 
