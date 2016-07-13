@@ -26,6 +26,11 @@
                 type: String
             },
 
+            checked: {
+                type: Boolean,
+                default: false
+            },
+
             val: {
                 type: [String, Number]
             },
@@ -54,7 +59,7 @@
         },
 
         mounted () {
-            if (this.$refs.radio.value === this.value) {
+            if (this.$refs.radio.value === this.value || this.checked) {
                 this.$refs.radio.setAttribute('checked', true)
             }
 

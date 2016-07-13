@@ -26,6 +26,11 @@
                 required: true
             },
 
+            checked: {
+                type: Boolean,
+                default: false
+            },
+
             value: {
                 type: Boolean,
                 required: false
@@ -60,7 +65,7 @@
                 this.$refs.checkbox.indeterminate = true
             }
 
-            if (this.value) {
+            if (this.value || this.checked) {
                 this.$refs.checkbox.setAttribute('checked', true)
             }
 
