@@ -1,5 +1,5 @@
 <template>
-    <select :class="classes">
+    <select>
         <option value=""
                 disabled
                 selected
