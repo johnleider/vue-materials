@@ -24,13 +24,18 @@
                 default: 'On'
             },
 
+            checked: {
+                type: Boolean,
+                default: false
+            },
+
             value: {
                 type: Boolean
             }
         },
 
         mounted () {
-            if (this.value) {
+            if (this.value || this.checked) {
                 this.$refs.checkbox.checked = true
             }
 
