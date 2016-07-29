@@ -8,9 +8,6 @@
        :data-gutter="gutter"
        :data-beloworigin="beloworigin"
        :data-alignment="alignment"
-       @click="$emit('click')"
-       @mouseenter="$emit('mouseenter')"
-       @mouseleave="$emit('mouseleave')"
     >
         <slot></slot>
     </a>
