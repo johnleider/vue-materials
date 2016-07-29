@@ -2,11 +2,11 @@
     <div class="fixed-action-btn"
          :class="classes"
     >
-        <btn-link large
+        <v-btn-link large
                   floating
         >
-            <icon>{{ icon }}</icon>
-        </btn-link>
+            <v-icon>{{ icon }}</v-icon>
+        </v-btn-link>
         <slot name="items"></slot>
     </div>
 </template>
