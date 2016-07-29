@@ -1,79 +1,79 @@
-import MFooter from './footer.vue'
-import MNav from './nav.vue'
-import MSideNav from './side-nav.vue'
-import Badge from './badge.vue'
-import Breadcrumbs from './breadcrumbs.vue'
-import Btn from './button.vue'
-import BtnLink from './button-link.vue'
-import Card from './card.vue'
-import Carousel from './carousel.vue'
-import CarouselItem from './carousel-item.vue'
-import Checkbox from './checkbox.vue'
-import Chip from './chip.vue'
-import Collapsible from './collapsible.vue'
-import Collection from './collection.vue'
-import CollectionItem from './collection-item.vue'
-import CollectionLink from './collection-link.vue'
-import CollectionAvatar from './collection-avatar.vue'
-import DateInput from './date-input.vue'
-import FileInput from './file-input.vue'
-import Icon from './icon.vue'
-import MaterialBox from './material-box.vue'
-import Modal from './modal.vue'
-import Fab from './fab.vue'
-import Pagination from './pagination.vue'
-import PaginationItem from './pagination-item.vue'
-import Parallax from './parallax.vue'
-import ProgressLinear from './progress-linear.vue'
-import ProgressCircular from './progress-circular.vue'
-import Radio from './radio.vue'
-import Range from './range.vue'
-import MSelect from './select.vue'
-import Slider from './slider.vue'
-import Slide from './slide.vue'
-import Switch from './switch.vue'
-import Tab from './tab.vue'
-import Tabs from './tabs.vue'
-import TextArea from './text-area.vue'
-import TextInput from './text-input.vue'
+import VFooter from './footer.vue'
+import VNav from './nav.vue'
+import VSideNav from './side-nav.vue'
+import VBadge from './badge.vue'
+import VBreadcrumbs from './breadcrumbs.vue'
+import VBtn from './button.vue'
+import VBtnLink from './button-link.vue'
+import VCard from './card.vue'
+import VCarousel from './carousel.vue'
+import VCarouselItem from './carousel-item.vue'
+import VCheckbox from './checkbox.vue'
+import VChip from './chip.vue'
+import VCollapsible from './collapsible.vue'
+import VCollection from './collection.vue'
+import VCollectionItem from './collection-item.vue'
+import VCollectionLink from './collection-link.vue'
+import VCollectionAvatar from './collection-avatar.vue'
+import VDateInput from './date-input.vue'
+import VFileInput from './file-input.vue'
+import VIcon from './icon.vue'
+import VMaterialBox from './material-box.vue'
+import VModal from './modal.vue'
+import VFab from './fab.vue'
+import VPagination from './pagination.vue'
+import VPaginationItem from './pagination-item.vue'
+import VParallax from './parallax.vue'
+import VProgressLinear from './progress-linear.vue'
+import VProgressCircular from './progress-circular.vue'
+import VRadio from './radio.vue'
+import VRange from './range.vue'
+import VSelect from './select.vue'
+import VSlider from './slider.vue'
+import VSlide from './slide.vue'
+import VSwitch from './switch.vue'
+import VTab from './tab.vue'
+import VTabs from './tabs.vue'
+import VTextArea from './text-area.vue'
+import VTextInput from './text-input.vue'
 
 export default {
-    MFooter,
-    MNav,
-    MSideNav,
-    Badge,
-    Breadcrumbs,
-    Btn,
-    BtnLink,
-    Card,
-    Carousel,
-    CarouselItem,
-    Chip,
-    Collapsible,
-    Collection,
-    CollectionItem,
-    Checkbox,
-    CollectionLink,
-    CollectionAvatar,
-    DateInput,
-    FileInput,
-    Icon,
-    MaterialBox,
-    Modal,
-    Fab,
-    Pagination,
-    PaginationItem,
-    Parallax,
-    ProgressLinear,
-    ProgressCircular,
-    Radio,
-    Range,
-    MSelect,
-    Slider,
-    Slide,
-    Switch,
-    Tab,
-    Tabs,
-    TextArea,
-    TextInput
+    VFooter,
+    VNav,
+    VSideNav,
+    VBadge,
+    VBreadcrumbs,
+    VBtn,
+    VBtnLink,
+    VCard,
+    VCarousel,
+    VCarouselItem,
+    VChip,
+    VCollapsible,
+    VCollection,
+    VCollectionItem,
+    VCheckbox,
+    VCollectionLink,
+    VCollectionAvatar,
+    VDateInput,
+    VFileInput,
+    VIcon,
+    VMaterialBox,
+    VModal,
+    VFab,
+    VPagination,
+    VPaginationItem,
+    VParallax,
+    VProgressLinear,
+    VProgressCircular,
+    VRadio,
+    VRange,
+    VSelect,
+    VSlider,
+    VSlide,
+    VSwitch,
+    VTab,
+    VTabs,
+    VTextArea,
+    VTextInput
 }

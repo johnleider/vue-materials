@@ -3,7 +3,7 @@ export default {
 
     render: (h, { data, children }) => {
         data.staticClass = data.staticClass || ''
-        data.staticClass += ' row'
+        data.staticClass += ' container'
 
         return h('div', data, children)
     }
