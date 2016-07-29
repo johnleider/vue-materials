@@ -6,7 +6,7 @@ export default {
             const params = binding.expression || {}
 
             el.setAttribute('data-activates', binding.arg)
-            $(el).dropdown()
+            $(el).dropdown(params)
         })
     }
 }
