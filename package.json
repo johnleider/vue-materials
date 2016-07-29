@@ -2,15 +2,15 @@
   "name": "vue-materials",
   "description": "Materialize.css components for Vue JS",
   "author": "John Leider <john.j.leider@gmail.com>",
-  "version": "1.0.17-beta.1",
+  "version": "1.0.24-beta.2",
   "private": false,
-  "main": "src/index.js",
+  "main": "dist/vue-materials.min.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --host=0.0.0.0 --config=build/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production webpack  --progress --hide-modules --config=build/webpack.config.js"
   },
   "dependencies": {
-    "vue": "^2.0.0-beta.1"
+    "vue": "^2.0.0-beta.5"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
