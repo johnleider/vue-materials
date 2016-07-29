@@ -8,6 +8,7 @@
             :data-gutter="gutter"
             :data-beloworigin="beloworigin"
             :data-alignment="alignment"
+            @click="$emit('click')"
     >
         <slot></slot>
     </button>

@@ -3,9 +3,9 @@
          :class="classes"
          :style="styles"
     >
-        <carousel-item v-for="i in items"
+        <v-carousel-item v-for="i in items"
                        :src="i"
-        ></carousel-item>
+        ></v-carousel-item>
         <slot></slot>
     </div>
 </template>
