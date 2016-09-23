@@ -1,6 +1,6 @@
 <template>
     <div :class="{ 'navbar-fixed': fixed }">
-        <nav>
+        <nav :class="[navClass]">
             <div class="nav-wrapper">
                 <slot name="logo"></slot>
                 <slot></slot>
@@ -13,6 +13,11 @@
 <script type="text/babel">
     export default {
         props: {
+            navClass: {
+                type: String,
+                default: ''
+            },
+
             fixed: {
                 type: Boolean,
                 default: false
