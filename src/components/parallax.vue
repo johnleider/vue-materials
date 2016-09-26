@@ -5,6 +5,7 @@
         <div class="parallax">
             <img :src="src">
         </div>
+        <slot></slot>
     </div>
 </template>
 
