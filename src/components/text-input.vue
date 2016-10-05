@@ -2,6 +2,7 @@
     <input class="validate"
            type="text"
            :length="length"
+           @input="$emit('input', $event.target.value)"
     >
 </template>
 
@@ -9,6 +10,8 @@
     import Counter from '../mixins/counter'
 
     export default {
+        props: ['value'],
+
         mixins: [
             Counter
         ]

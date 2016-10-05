@@ -1,6 +1,7 @@
 <template>
     <textarea class="materialize-textarea"
               :length="length"
+              @input="$emit('input', $event.target.value)"
     >
         <slot></slot>
     </textarea>
