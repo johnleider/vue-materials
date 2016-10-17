@@ -2,6 +2,7 @@
     <input class="validate"
            type="text"
            :length="length"
+           :value="value"
            @input="$emit('input', $event.target.value)"
     >
 </template>
