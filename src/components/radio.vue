@@ -50,6 +50,12 @@
             }
         },
 
+        watch: {
+            value () {
+                this.$refs.radio.checked = this.value == this.val
+            }
+        },
+
         computed: {
             classes () {
                 return {
@@ -59,9 +65,7 @@
         },
 
         mounted () {
-            if (this.$refs.radio.value === this.value || this.checked) {
-                this.$refs.radio.setAttribute('checked', true)
-            }
+            this.$refs.radio.checked = this.$refs.radio.value == this.value || this.checked
 
             const vm = this
             this.$refs.radio.onchange = function () {
