@@ -36,7 +36,7 @@
             classes () {
                 return Object.assign(
                     this.buttonsMixin,
-                    this.wavesMixing
+                    this.wavesMixin
                 )
             }
         }
