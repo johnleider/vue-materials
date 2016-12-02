@@ -1,12 +1,12 @@
 <template>
-    <select>
+    <select v-model="model" v-bind:multiple="multiple">
         <option value=""
                 disabled
-                selected
         >{{ selectText }}</option>
         <option v-for="item in items"
-                :value="item.id"
-        >{{ item.text }}</option>
+                v-bind:value="item.id"
+                v-text="item.text"
+        ></option>
         <slot></slot>
     </select>
 </template>
@@ -20,9 +20,27 @@
                 type: Array,
                 default: () => []
             },
+            multiple: {
+                type: Boolean,
+                default: false
+            },
             selectText: {
                 type: String,
                 default: 'Choose your options'
+            },
+            value: {
+                default: null,
+                required: false
+            }
+        },
+
+        computed: {
+            model () {
+                if (this.multiple && !this.value) {
+                    return []
+                }
+
+                return this.value
             }
         },
 
@@ -36,15 +54,15 @@
 
                 const vm = this
                 this.$el.onchange = function () {
-                    if (!this.hasAttribute('multiple')) {
+                    if (!this.multiple) {
                         vm.$emit('input', this.value)
                     } else {
-                        vm.multiple(this, vm)
+                        vm.multi(this, vm)
                     }
                 }
             },
 
-            multiple (context, vm) {
+            multi (context, vm) {
                 const siblings = [...vm.$el.previousSibling.getElementsByClassName('active')].map(i => {
                     return i.getElementsByTagName('label')[0].nextSibling.nodeValue
                 })
