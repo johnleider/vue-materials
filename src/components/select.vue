@@ -3,7 +3,7 @@
         <option value=""
                 disabled
                 selected
-        >Choose your options</option>
+        >{{ selectText }}</option>
         <option v-for="item in items"
                 :value="item.id"
         >{{ item.text }}</option>
@@ -19,6 +19,10 @@
             items: {
                 type: Array,
                 default: () => []
+            },
+            selectText: {
+                type: String,
+                default: 'Choose your options'
             }
         },
 
