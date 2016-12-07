@@ -15,19 +15,26 @@
         props: {
             value: {
                 type: String
+            },
+            format: {
+                type: String
             }
         },
 
         methods: {
             init () {
-                $(this.$el).pickadate()
+                if (this.format) $(this.$el).pickadate({format: this.format})
+                else $(this.$el).pickadate()
 
                 const picker = $(this.$el).pickadate('picker')
                 picker.set('select', this.value)
 
                 const vm = this
                 this.$el.onchange = function () {
-                    vm.$emit('input', picker.get('select', 'd mmmm, yyyy'))
+                    if (this.format)
+                        vm.$emit('input', picker.get('select', this.format))
+                    else
+                        vm.$emit('input', picker.get('select', 'd mmmm, yyyy'))
                 }
             }
         }    
