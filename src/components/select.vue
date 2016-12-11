@@ -34,6 +34,13 @@
             }
         },
 
+        watch: {
+            items () {
+                this.$el.removeAttribute('onchange')
+                this.$nextTick(this.init)
+            }
+        },
+
         computed: {
             model () {
                 if (this.multiple && !this.value) {
