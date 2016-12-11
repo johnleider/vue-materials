@@ -2,7 +2,7 @@
   "name": "vue-materials",
   "description": "Materialize.css components for Vue JS",
   "author": "John Leider <john.j.leider@gmail.com>",
-  "version": "1.0.6-rc.6",
+  "version": "1.0.7-rc.6",
   "private": false,
   "main": "dist/vue-materials.min.js",
   "scripts": {
