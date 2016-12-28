@@ -1,6 +1,11 @@
-# vue-materialize
+# Vue Materials
+<p align="center">
+<a href="https://www.npmjs.com/package/vue-materials"><img src="https://img.shields.io/npm/dt/vue-materials.svg" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/vue-materials"><img src="https://img.shields.io/npm/v/vue-materials.svg" alt="Version"></a>
+</p>
 
 > Vue 2.0 and Materialize.css Components
+
 
 ## Build Setup
 
