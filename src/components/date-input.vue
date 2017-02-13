@@ -31,8 +31,8 @@
 
                 const vm = this
                 this.$el.onchange = function () {
-                    if (this.format)
-                        vm.$emit('input', picker.get('select', this.format))
+                    if (vm.format)
+                        vm.$emit('input', picker.get('select', vm.format))
                     else
                         vm.$emit('input', picker.get('select', 'd mmmm, yyyy'))
                 }
