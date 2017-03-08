@@ -5,7 +5,7 @@
         >{{ selectText }}</option>
         <option v-for="item in items"
                 v-bind:value="item.id"
-                v-text="item.text"
+                v-text="item[textField]"
         ></option>
         <slot></slot>
     </select>
@@ -31,6 +31,10 @@
             value: {
                 default: null,
                 required: false
+            },
+            textField: {
+                type: String,
+                default: 'text'
             }
         },
 
