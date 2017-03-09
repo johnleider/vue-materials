@@ -4,6 +4,7 @@
             {{ off }}
             <input type="checkbox"
                    ref="checkbox"
+                   :name="name"
             >
             <span class="lever"></span>
             {{ on }}
@@ -23,6 +24,8 @@
                 type: String,
                 default: 'On'
             },
+
+            name: String,
 
             checked: {
                 type: Boolean,
