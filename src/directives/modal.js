@@ -9,7 +9,7 @@ export default {
                 el.setAttribute('href', `#${binding.arg}`)
             }
             
-            $(el).leanModal(binding.value || {})
+            $(`#${binding.arg}`).modal(binding.value || {})
         })
     }
 }
