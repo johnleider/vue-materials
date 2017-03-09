@@ -42,6 +42,10 @@
             items () {
                 this.$el.removeAttribute('onchange')
                 this.$nextTick(this.init)
+            },
+            value () {
+                this.$el.removeAttribute('onchange')
+                this.$nextTick(this.init)
             }
         },
 
