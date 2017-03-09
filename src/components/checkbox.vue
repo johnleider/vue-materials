@@ -1,13 +1,13 @@
 <template>
     <p>
       <input type="checkbox"
-             :id="id"
+             :id="id || name"
              :name="name"
              :disabled="disabled"
              :class="classes"
              ref="checkbox"
       >
-      <label :for="id">
+      <label :for="id || name">
           <slot></slot>
       </label>
     </p>
@@ -16,10 +16,7 @@
 <script type="text/babel">
     export default {
         props: {
-            id: {
-                type: String,
-                required: true
-            },
+            id: String,
 
             name: {
                 type: String,
@@ -32,7 +29,6 @@
             },
 
             value: {
-                type: Boolean,
                 required: false
             },
 
@@ -49,6 +45,10 @@
             filledIn: {
                 type: Boolean,
                 default: false
+            },
+
+            valueV: {
+                required: false
             }
         },
 
@@ -65,7 +65,10 @@
                 this.$refs.checkbox.indeterminate = true
             }
 
-            if (this.value || this.checked) {
+            if ((Array.isArray(this.value) &&
+                this.value.includes(this.valueV)) ||
+                    (!Array.isArray(this.value) &&
+                        this.value)) {
                 this.$refs.checkbox.setAttribute('checked', true)
             }
 
