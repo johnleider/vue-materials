@@ -5,7 +5,7 @@ export default {
         Load.call(vnode.context, () => {
             const params = binding.value || {}
 
-            el.setAttribute('data-activates', binding.arg)
+            el.setAttribute('data-activates', binding.arg || params.value)
             $(el).dropdown(params)
         })
     }
